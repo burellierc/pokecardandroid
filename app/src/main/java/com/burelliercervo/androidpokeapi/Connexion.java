@@ -6,6 +6,8 @@ import android.net.NetworkInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.facebook.CallbackManager;
@@ -17,6 +19,8 @@ import com.facebook.appevents.AppEventsLogger;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 import org.json.JSONObject;
+
+import java.net.URL;
 
 public class Connexion extends AppCompatActivity {
     CallbackManager callbackManager;
@@ -57,14 +61,16 @@ public class Connexion extends AppCompatActivity {
             Log.d("NetworkState", "L'interface de connexion active est du Wifi : " + wifi);
             boolean cellular = networkInfo.getType() == ConnectivityManager.TYPE_MOBILE;
             Log.d("NetworkState", "L'interface de connexion active est du Wifi : " + cellular);
+            TextView connexionfailed = (TextView)findViewById(R.id.connexionfailed);
+            connexionfailed.setVisibility(View.INVISIBLE);
         }
             else{
-                Toast toast = Toast.makeText(getApplicationContext(), "Veuillez vous connecter en wifi ou 3G",Toast.LENGTH_LONG);
-                toast.show();
-
-
+                TextView connexionfailed = (TextView)findViewById(R.id.connexionfailed);
+                connexionfailed.setVisibility(View.VISIBLE);
             }
 
+        String url1 = "https://pokeapi.co/api/v2/pokedex/1/";
+        new RetrieveFeedTask().execute(url1);
 
       /*  Button btnAffichePokemon = (Button) findViewById(R.id.btnAffichePokemon);
         btnAffichePokemon.setOnClickListener(new View.OnClickListener() {
