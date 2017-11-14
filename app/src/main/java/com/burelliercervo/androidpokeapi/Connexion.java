@@ -69,8 +69,8 @@ public class Connexion extends AppCompatActivity {
                 connexionfailed.setVisibility(View.VISIBLE);
             }
 
-        String url1 = "https://pokeapi.co/api/v2/pokedex/1/";
-        new RetrieveFeedTask().execute(url1);
+        //String url1 = "https://pokeapi.co/api/v2/pokedex/1/";
+        //new RetrieveFeedTask().execute(url1);
 
       /*  Button btnAffichePokemon = (Button) findViewById(R.id.btnAffichePokemon);
         btnAffichePokemon.setOnClickListener(new View.OnClickListener() {

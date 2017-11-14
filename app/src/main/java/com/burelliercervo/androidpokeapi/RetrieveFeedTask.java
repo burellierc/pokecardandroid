@@ -1,73 +1,88 @@
 package com.burelliercervo.androidpokeapi;
 
-import android.app.AlertDialog;
 import android.os.AsyncTask;
-import android.util.Log;
-import android.widget.ArrayAdapter;
 
-import org.json.JSONArray;
+import com.google.gson.Gson;
+import com.google.gson.JsonSyntaxException;
+
+
+
 import org.json.JSONException;
-import org.json.JSONObject;
-import org.json.JSONTokener;
-
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.List;
 
-import static android.R.attr.data;
+public class RetrieveFeedTask extends AsyncTask<String, Void, Response> {
 
-/**
- * Created by iem on 18/10/2017.
- */
+    public RetrieveFeedTask(Listener listener) {
 
-class RetrieveFeedTask extends AsyncTask<String, Void, String> {
-public String test;
+        mListener = listener;
+    }
 
-    protected String doInBackground(String... urls) {
+    public interface Listener {
+
+        void onLoaded(List<PokemonNom> pokemonList);
+
+        void onError();
+    }
+
+    private Listener mListener;
+
+    @Override
+    protected Response doInBackground(String... strings) {
         try {
-            URL url = new URL(urls[0]);
-            HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
-            try {
-                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));
-                StringBuilder stringBuilder = new StringBuilder();
-                String line;
-                while ((line = bufferedReader.readLine()) != null) {
-                    stringBuilder.append(line).append("\n");
-                }
-                bufferedReader.close();
-                return stringBuilder.toString();
-            }
-            finally{
-                urlConnection.disconnect();
-            }
-        }
-        catch(Exception e) {
-            Log.e("ERROR", e.getMessage(), e);
+
+            String stringResponse = loadJSON(strings[0]);
+            Gson gson = new Gson();
+
+            return gson.fromJson(stringResponse, Response.class);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+
+        } catch (JSONException e) {
+            e.printStackTrace();
             return null;
         }
     }
 
-    protected void onPostExecute(String response) {
-        if(response == null) {
-            response = "THERE WAS AN ERROR";
+    @Override
+    protected void onPostExecute(Response response) {
+
+        if (response != null) {
+
+            mListener.onLoaded(response.getPokemon());
+
+        } else {
+
+            mListener.onError();
         }
-        Log.i("INFO", response);
-        try {
+    }
 
-            /*JSONObject jsonObject = new JSONObject(url1);
+    private String loadJSON(String jsonURL) throws IOException {
 
-            String response = jsonObject.getString("response");
-            tvApi.setText(response);*/
+        URL url = new URL(jsonURL);
+        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+        conn.setReadTimeout(10000);
+        conn.setConnectTimeout(15000);
+        conn.setRequestMethod("GET");
+        conn.setDoInput(true);
+        conn.connect();
 
-            JSONObject json= (JSONObject) new JSONTokener(response).nextValue();
-            JSONObject json2 = json.getJSONObject("results");
-            test = (String) json2.get("name");
+        BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+        String line;
+        StringBuilder response = new StringBuilder();
 
-        } catch (JSONException e) {
-            e.printStackTrace();
+        while ((line = in.readLine()) != null) {
+
+            response.append(line);
         }
-        //responseView.setText(response);
+
+        in.close();
+        return response.toString();
     }
 }
