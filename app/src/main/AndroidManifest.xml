@@ -40,6 +40,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".UserProfile" />
+        <activity android:name=".ListCard"></activity>
     </application>
 
 </manifest>
