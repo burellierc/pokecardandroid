@@ -77,7 +77,6 @@ public class Connexion extends AppCompatActivity {
       Button GoToList = (Button) findViewById(R.id.goToList);
         GoToList.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-
                 startActivity(new Intent(Connexion.this, ListCard.class));
             }
 

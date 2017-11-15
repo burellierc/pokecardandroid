@@ -2,6 +2,7 @@ package com.burelliercervo.androidpokeapi;
 
         import android.support.v7.app.AppCompatActivity;
         import android.os.Bundle;
+        import android.util.Log;
         import android.widget.ListAdapter;
         import android.widget.ListView;
         import android.widget.SimpleAdapter;
@@ -12,11 +13,11 @@ package com.burelliercervo.androidpokeapi;
         import java.util.HashMap;
         import java.util.List;
 
-public class ListCard extends AppCompatActivity implements RetrieveFeedTask.Listener {
+public class ListCard extends AppCompatActivity {
 
     private ListView mListView;
 
-    public static final String URL = "https://pokeapi.co/api/v2/pokedex/1/";
+    public static final String URL = "http://192.168.240.43/jsonExport.json";
 
     private List<HashMap<String, String>> mPokemonMapList = new ArrayList<>();
 
@@ -31,57 +32,6 @@ public class ListCard extends AppCompatActivity implements RetrieveFeedTask.List
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         mListView = (ListView) findViewById(R.id.listview);
-        //mListView.setOnItemClickListener(this);
-        //new L(this).execute(URL);
-        new RetrieveFeedTask(this).execute(URL);
-
-
-
-    }
-
-    @Override
-    public void onLoaded(List<Pokemon> pokemonList) {
-
-        for (Pokemon pokemon : pokemonList) {
-
-            HashMap<String, String> map = new HashMap<>();
-
-            //map.put(KEY_ID, pokemon.getId());
-            map.put(KEY_NAME, pokemon.getName());
-            map.put(KEY_WIDHT, pokemon.getWidth());
-            map.put(KEY_HEIGHT, pokemon.getHeight());
-            map.put(KEY_XP, pokemon.getXp());
-
-
-            mPokemonMapList.add(map);
-        }
-
-        loadListView();
-    }
-
-    @Override
-    public void onError() {
-
-        Toast.makeText(this, "Error !", Toast.LENGTH_SHORT).show();
-    }
-
-    //@Override
-    //public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-
-     //   Toast.makeText(this, mPokemonMapList.get(i).get(KEY_NAME),Toast.LENGTH_LONG).show();
-    //}
-
-    private void loadListView() {
-
-        ListAdapter adapter = new SimpleAdapter(ListCard.this, mPokemonMapList, R.layout.activity_list_card,
-                new String[] {KEY_NAME},
-                new int[] { R.id.listview});
-
-        //ListAdapter adapter = new SimpleAdapter(ListCard.this,mPokemonMapList,R.layout.activity_list_card);
-
-        mListView.setAdapter(adapter);
-
     }
 }
