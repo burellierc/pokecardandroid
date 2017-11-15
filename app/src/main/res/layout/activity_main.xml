@@ -27,16 +27,13 @@
         android:textSize="33px"
         android:layout_alignParentBottom="true" />
 
-    <TextView
-        android:id="@+id/tvApi"
+    <Button
+        android:id="@+id/goToList"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/login_button"
-        android:layout_alignStart="@+id/login_button"
+        android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:layout_marginLeft="20dp"
-        android:layout_marginStart="20dp"
-        android:text="TextView" />
+        android:text="Go to list" />
 
 
 </RelativeLayout>

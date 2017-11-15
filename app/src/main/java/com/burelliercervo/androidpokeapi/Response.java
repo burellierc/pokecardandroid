@@ -9,9 +9,9 @@ import java.util.List;
 public class Response {
 
 
-        private List<PokemonNom> pokemon = new ArrayList<PokemonNom>();
+        private List<Pokemon> pokemon = new ArrayList<Pokemon>();
 
-        public List<PokemonNom> getPokemon() {
+        public List<Pokemon> getPokemon() {
             return pokemon;
 
     }

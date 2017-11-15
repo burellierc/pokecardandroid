@@ -6,9 +6,6 @@ import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
 
 
-
-import org.json.JSONException;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -25,7 +22,7 @@ public class RetrieveFeedTask extends AsyncTask<String, Void, Response> {
 
     public interface Listener {
 
-        void onLoaded(List<PokemonNom> pokemonList);
+        void onLoaded(List<Pokemon> pokemonList);
 
         void onError();
     }

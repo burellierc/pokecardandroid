@@ -7,9 +7,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
+import android.widget.Toast;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
@@ -18,6 +19,7 @@ import com.facebook.GraphResponse;
 import com.facebook.appevents.AppEventsLogger;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
+
 import org.json.JSONObject;
 
 import java.net.URL;
@@ -72,14 +74,14 @@ public class Connexion extends AppCompatActivity {
         //String url1 = "https://pokeapi.co/api/v2/pokedex/1/";
         //new RetrieveFeedTask().execute(url1);
 
-      /*  Button btnAffichePokemon = (Button) findViewById(R.id.btnAffichePokemon);
-        btnAffichePokemon.setOnClickListener(new View.OnClickListener() {
+      Button GoToList = (Button) findViewById(R.id.goToList);
+        GoToList.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                //t.setText(param[0]);
 
+                startActivity(new Intent(Connexion.this, ListCard.class));
             }
 
-        });*/
+        });
     }
 
     @Override

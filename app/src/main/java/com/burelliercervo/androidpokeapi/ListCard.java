@@ -2,8 +2,6 @@ package com.burelliercervo.androidpokeapi;
 
         import android.support.v7.app.AppCompatActivity;
         import android.os.Bundle;
-        import android.view.View;
-        import android.widget.AdapterView;
         import android.widget.ListAdapter;
         import android.widget.ListView;
         import android.widget.SimpleAdapter;
@@ -44,9 +42,9 @@ public class ListCard extends AppCompatActivity implements RetrieveFeedTask.List
     }
 
     @Override
-    public void onLoaded(List<PokemonNom> pokelist) {
+    public void onLoaded(List<Pokemon> pokemonList) {
 
-        for (PokemonNom pokemon : pokelist) {
+        for (Pokemon pokemon : pokemonList) {
 
             HashMap<String, String> map = new HashMap<>();
 
