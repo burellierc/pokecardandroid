@@ -3,21 +3,12 @@
 
     <item
         is-multidex="true"
-        jar="/Users/iem/.android/build-cache/a4a750061b4bde1adb39c2be9bba6783c30dc145/output/jars/classes.jar"
+        jar="/Users/iem/Desktop/PokeCard/pokecard/AndroidApp/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.3"
-        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
-        <dex dex="/Users/iem/Desktop/PokeCard/pokecard/AndroidApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_3ad935ad5be6a592bc8c27656942035eee1bbb6a/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/iem/.android/build-cache/6c44680fe3bfb141819106b52af8cc7d751e93a4/output/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.3"
-        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
-        <dex dex="/Users/iem/Desktop/PokeCard/pokecard/AndroidApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_00328ab153c4e9b68f8a8d6cdba6855b0981b00b/classes.dex" />
+        sha1="0d9ed598bd3fcfddbab07a3d50739456d3dd4db6">
+        <dex dex="/Users/iem/Desktop/PokeCard/pokecard/AndroidApp/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_1c9a080db095e71fd806a49c4d5698c46df94587/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -27,132 +18,6 @@
         revision="25.0.3"
         sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
         <dex dex="/Users/iem/Desktop/PokeCard/pokecard/AndroidApp/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_59b25c66b687e7effc6105193f56ed43c7ae2443/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/iem/.android/build-cache/4c8b190d2083c8ff640a55aa6deda8722b86e701/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.3"
-        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
-        <dex dex="/Users/iem/Desktop/PokeCard/pokecard/AndroidApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_1cfedd3da647a06050916a108f5d0e520028a926/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/iem/.android/build-cache/64b477b226c69c4e1ba59a2ba3485fac65782d83/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.3"
-        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
-        <dex dex="/Users/iem/Desktop/PokeCard/pokecard/AndroidApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_3d2cf269ecbfb511cce898b9c8f2a9488f835c5b/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/iem/.android/build-cache/4bb4336c2ece62e95311bf26553eb5c615cadfea/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.3"
-        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
-        <dex dex="/Users/iem/Desktop/PokeCard/pokecard/AndroidApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_0487f055c36e880c2053865061fbe171f93f34b9/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/iem/.android/build-cache/bcee8ae4595a849287e2e883a9c2e6939d622aa7/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.3"
-        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
-        <dex dex="/Users/iem/Desktop/PokeCard/pokecard/AndroidApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_9e557cba498a3a383e942c246a10e1429e780a4d/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/iem/.android/build-cache/45be4900affe2332cedac6e6e1232a54d52701c9/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.3"
-        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
-        <dex dex="/Users/iem/Desktop/PokeCard/pokecard/AndroidApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_95fd5bb234b5536b1166b8cc816a520560d1116c/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/iem/.android/build-cache/7b34c89ba0932a94259938b0038baa0f50878e9b/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.3"
-        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
-        <dex dex="/Users/iem/Desktop/PokeCard/pokecard/AndroidApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_04fd43e77b446f9c7436dfb0d7ae2cddf369ed74/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/iem/.android/build-cache/4c8b190d2083c8ff640a55aa6deda8722b86e701/output/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.3"
-        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
-        <dex dex="/Users/iem/Desktop/PokeCard/pokecard/AndroidApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_45e14968a7302372bbbfb3b6a05c38b36f6ac065/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/iem/.android/build-cache/a4a750061b4bde1adb39c2be9bba6783c30dc145/output/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.3"
-        sha1="867dad63c33388ff8c7644b236579355036d075f">
-        <dex dex="/Users/iem/Desktop/PokeCard/pokecard/AndroidApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_ea3cfec18c05194a5539d721e5d828c56a26205d/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/iem/.android/build-cache/6936cc116627e74cc91839970496c31c4060049c/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.3"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="/Users/iem/Desktop/PokeCard/pokecard/AndroidApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_941e889efe5178c87a377aab129b784ff6e47b52/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/iem/.android/build-cache/bcee8ae4595a849287e2e883a9c2e6939d622aa7/output/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.3"
-        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
-        <dex dex="/Users/iem/Desktop/PokeCard/pokecard/AndroidApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_3697520606a8f45734ba44650409a03941dfaa78/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/iem/.android/build-cache/6c44680fe3bfb141819106b52af8cc7d751e93a4/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.3"
-        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
-        <dex dex="/Users/iem/Desktop/PokeCard/pokecard/AndroidApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_00286569e1803f8d59493f5408f8266fc6b61f2a/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/iem/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/24.2.1/support-annotations-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.3"
-        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
-        <dex dex="/Users/iem/Desktop/PokeCard/pokecard/AndroidApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-24.2.1_2e4755d9e4a7cd92021d38a695b71073ee92d948/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/iem/.android/build-cache/45be4900affe2332cedac6e6e1232a54d52701c9/output/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.3"
-        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
-        <dex dex="/Users/iem/Desktop/PokeCard/pokecard/AndroidApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_53633a165d8e890d22a2204d34f4974fa9b0ec9a/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/iem/Desktop/PokeCard/pokecard/AndroidApp/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.3"
-        sha1="c6857b8f546d7ac864f3476d17040c57b1b1b325">
-        <dex dex="/Users/iem/Desktop/PokeCard/pokecard/AndroidApp/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_1c9a080db095e71fd806a49c4d5698c46df94587/classes.dex" />
     </item>
 
 </items>

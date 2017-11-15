@@ -1,37 +1,53 @@
 package com.burelliercervo.androidpokeapi;
 
-        import android.support.v7.app.AppCompatActivity;
-        import android.os.Bundle;
-        import android.util.Log;
-        import android.widget.ListAdapter;
-        import android.widget.ListView;
-        import android.widget.SimpleAdapter;
-        import android.widget.Toast;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.widget.ListView;
 
-
-        import java.util.ArrayList;
-        import java.util.HashMap;
-        import java.util.List;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ListCard extends AppCompatActivity {
 
+    public static final String URL = "https://pokeapi.co/api/v2/pokedex/1/";
+    MyListAdapter myListAdapter;
     private ListView mListView;
-
-    public static final String URL = "http://192.168.240.43/jsonExport.json";
-
-    private List<HashMap<String, String>> mPokemonMapList = new ArrayList<>();
-
-    //private static final int KEY_ID = "id";
-    private static final String KEY_NAME = "name";
-    private static final String KEY_XP = "xp";
-    private static final String KEY_HEIGHT = "height";
-    private static final String KEY_WIDHT = "width";
-
+    private List<Pokemon> pokemons = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_list_card);
+        pokemons.add(new Pokemon("Dracaufeu", "24", "Feu"));
+        pokemons.add(new Pokemon("Bulbizar", "38", "Eau"));
+        pokemons.add(new Pokemon("Dracaufeu", "24", "Feu"));
+        pokemons.add(new Pokemon("Bulbizar", "38", "Eau"));
+        pokemons.add(new Pokemon("Dracaufeu", "24", "Feu"));
+        pokemons.add(new Pokemon("Bulbizar", "38", "Eau"));
+        pokemons.add(new Pokemon("Dracaufeu", "24", "Feu"));
+        pokemons.add(new Pokemon("Bulbizar", "38", "Eau"));
+        pokemons.add(new Pokemon("Dracaufeu", "24", "Feu"));
+        pokemons.add(new Pokemon("Bulbizar", "38", "Eau"));
+        pokemons.add(new Pokemon("Dracaufeu", "24", "Feu"));
+        pokemons.add(new Pokemon("Bulbizar", "38", "Eau"));
+        pokemons.add(new Pokemon("Dracaufeu", "24", "Feu"));
+        pokemons.add(new Pokemon("Bulbizar", "38", "Eau"));
+        pokemons.add(new Pokemon("Dracaufeu", "24", "Feu"));
+        pokemons.add(new Pokemon("Bulbizar", "38", "Eau"));
+        pokemons.add(new Pokemon("Dracaufeu", "24", "Feu"));
+        pokemons.add(new Pokemon("Bulbizar", "38", "Eau"));
+        pokemons.add(new Pokemon("Dracaufeu", "24", "Feu"));
+        pokemons.add(new Pokemon("Bulbizar", "38", "Eau"));
+
+
+        myListAdapter = new MyListAdapter(pokemons, this);
         mListView = (ListView) findViewById(R.id.listview);
+
+        mListView.setAdapter(myListAdapter);
+
+        myListAdapter.notifyDataSetChanged();
+
+
     }
+
 }
