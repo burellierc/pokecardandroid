@@ -44,7 +44,7 @@ public class RetrieveFeedTask extends AsyncTask<String, Void, Response> {
             e.printStackTrace();
             return null;
 
-        } catch (JSONException e) {
+        } catch (JsonSyntaxException e) {
             e.printStackTrace();
             return null;
         }
