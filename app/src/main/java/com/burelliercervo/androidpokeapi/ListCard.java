@@ -1,7 +1,10 @@
 package com.burelliercervo.androidpokeapi;
 
+        import android.graphics.Color;
         import android.support.v7.app.AppCompatActivity;
         import android.os.Bundle;
+        import android.util.Log;
+        import android.widget.ArrayAdapter;
         import android.widget.ListAdapter;
         import android.widget.ListView;
         import android.widget.SimpleAdapter;
@@ -32,7 +35,9 @@ public class ListCard extends AppCompatActivity implements RetrieveFeedTask.List
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mListView = (ListView) findViewById(R.id.listview);
+        mListView= (ListView) findViewById(R.id.listview);
+        ArrayList<HashMap<String, String>> mylist = new ArrayList<HashMap<String, String>>();
+
         //mListView.setOnItemClickListener(this);
         //new L(this).execute(URL);
         new RetrieveFeedTask(this).execute(URL);
@@ -65,6 +70,7 @@ public class ListCard extends AppCompatActivity implements RetrieveFeedTask.List
     public void onError() {
 
         Toast.makeText(this, "Error !", Toast.LENGTH_SHORT).show();
+
     }
 
     //@Override
@@ -75,13 +81,16 @@ public class ListCard extends AppCompatActivity implements RetrieveFeedTask.List
 
     private void loadListView() {
 
-        ListAdapter adapter = new SimpleAdapter(ListCard.this, mPokemonMapList, R.layout.activity_list_card,
-                new String[] {KEY_NAME},
-                new int[] { R.id.listview});
+        ListAdapter adapter = new SimpleAdapter(ListCard.this, mPokemonMapList, R.layout.layout,
+                new String[] {  KEY_NAME },
+                new int[] { R.id.name});
 
-        //ListAdapter adapter = new SimpleAdapter(ListCard.this,mPokemonMapList,R.layout.activity_list_card);
 
         mListView.setAdapter(adapter);
 
+
     }
+
+
+
 }
